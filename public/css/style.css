@@ -1,0 +1,15 @@
+.input {
+    height: 500px;
+    width: 50%;
+    float: left;
+}
+span, button{
+    margin-left: 20px;
+}
+
+.output {
+    height: 500px;
+    width: 50%;
+    float: left;
+}
+
