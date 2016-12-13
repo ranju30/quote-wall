@@ -8,16 +8,16 @@ function store() {
     if (toSaveName != "" && toSaveQuote != "") {
         emptyField();
         $.post("/store", {name: toSaveName, quote: toSaveQuote}, function (res, err) {
-            $('#updateWall').append('<b>' + toSaveName + '</b>' + ' : ' + toSaveQuote + '<br>');
+            $('#updateWall').append('<b>' + toSaveName + '</b>' + ' : ' + '<i>' + toSaveQuote + '</i>' + '<br>');
         })
     }
 }
 
 function allQuotes() {
     $.get("/store", function (res, err) {
-        $('#output').html(res);
+        $('#updateWall').html(res);
     })
 }
-// window.load = allQuotes();
+window.load = allQuotes();
 
 

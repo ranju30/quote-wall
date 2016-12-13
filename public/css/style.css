@@ -3,7 +3,8 @@
     width: 50%;
     float: left;
 }
-span, button{
+
+span, button {
     margin-left: 20px;
 }
 
@@ -11,5 +12,15 @@ span, button{
     height: 500px;
     width: 50%;
     float: left;
+}
+
+b {
+    color: green;
+    font-size: 20px;
+}
+
+i{
+    color: steelblue;
+    font-size: 17px;
 }
 

@@ -24,7 +24,7 @@ func SaveQuote() http.HandlerFunc {
 		req.ParseForm();
 		name := strings.Join(req.Form["name"], "");
 		quote := strings.Join(req.Form["quote"], "");
-		quote_to_db := model.Quote{Quote:quote,Name:name}
+		quote_to_db := model.Quote{Quote:quote, Name:name}
 		err := database.StoreQuote(db, &quote_to_db)
 		if (err != nil) {
 			log.Fatal(err.Error())
