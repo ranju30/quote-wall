@@ -2,18 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <script type="text/javascript" src="./js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="./js/loadWall.js"></script>
     <title>Quote Wall</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<div class="input" >
+<div class="input">
     <h4 align="center">Enter Quote</h4>
-    <span> Name: </span><span><input type="text" name="name" required></span><br>
-    <span>Quote: </span><br><span><textarea rows="10" cols="60" id="textArea"></textarea></span><br>
-    <button>Save</button>
+        <span> Name: </span><span><input id="name" type="text" name="name" required value=""></span><br>
+        <span>Quote: </span><br><span><textarea rows="10" cols="60" id="textArea"></textarea></span><br>
+        <button onclick="store()">Save</button>
+    <br>
+
 </div>
 <div class="output">
     <h4 align="center">Quote Wall</h4>
+    <div id="updateWall"></div>
 </div>
 </body>
 </html>
