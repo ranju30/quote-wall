@@ -7,6 +7,7 @@ import (
 	"log"
 	"net/http"
 	"database/sql"
+	"fmt"
 )
 
 func openDB() *sql.DB {
@@ -32,5 +33,22 @@ func SaveQuote() http.HandlerFunc {
 			return
 		}
 		res.Write([]byte("Quote has stored.."));
+	}
+}
+
+func GetQuote() http.HandlerFunc {
+	db := openDB();
+	return func(res http.ResponseWriter, req *http.Request) {
+		data, err := database.GetAllQuote(db);
+		if (err != nil) {
+			res.Write([]byte("got error.."))
+			return
+		}
+		var quotes string;
+		for _, each := range data {
+			fmt.Println(each)
+			quotes += "<b>" + each.Name + "</b>" + " : " + "<span>" + each.Quote + "</span>" + "<br/>"
+		}
+		res.Write([]byte(quotes));
 	}
 }

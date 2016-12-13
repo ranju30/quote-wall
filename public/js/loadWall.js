@@ -8,7 +8,7 @@ function store() {
     if (toSaveName != "" && toSaveQuote != "") {
         emptyField();
         $.post("/store", {name: toSaveName, quote: toSaveQuote}, function (res, err) {
-            $('#updateWall').append('<b>' + toSaveName + '</b>' + ' : ' + '<i>' + toSaveQuote + '</i>' + '<br>');
+            $('#updateWall').append('<b>' + toSaveName + '</b>' + ' : ' + '<span>' + toSaveQuote + '</span>' + '<br>');
         })
     }
 }

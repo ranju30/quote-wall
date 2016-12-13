@@ -15,12 +15,13 @@ span, button {
 }
 
 b {
-    color: green;
-    font-size: 20px;
+    color: steelblue;
+    /*font-size: 20px;*/
 }
 
-i{
-    color: steelblue;
-    font-size: 17px;
+span {
+    font-family: Serif;
+    /*color: steelblue;*/
+    /*font-size: 17px;*/
 }
 
